@@ -8,6 +8,7 @@ public class ContaCorretora
     private float saldo;
     private boolean status;
     private float dividendos;
+    private float dep;
     
     public void situacao()
     {
@@ -61,11 +62,12 @@ public class ContaCorretora
     
     public void depositar(float v)
     {
+        this.setDep(v);
         
         if(this.getStatus() == true)
         {
             this.setSaldo(this.getSaldo() + v); //já acrescenta o valor "v" ao atributo "saldo" utilizando o método set
-            System.out.println("Depósito feito na conta de: " + this.getDono());
+            System.out.println("Depósito feito na conta de: " + this.getDono() + " valor do depósito R$ " + this.getDep());
         }
         else
         {
@@ -165,4 +167,14 @@ public class ContaCorretora
     public void setDividendos(float dividendos) {
         this.dividendos = dividendos;
     }   
+
+    public float getDep() {
+        return dep;
+    }
+
+    public void setDep(float dep) {
+        this.dep = dep;
+    }
+    
+    
 }
