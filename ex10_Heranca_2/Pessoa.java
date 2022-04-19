@@ -1,0 +1,51 @@
+
+package com.mycompany.heranca_2;
+
+public abstract class Pessoa //classes abstratas não permitem ser instanciadas
+{
+    private String nome;
+    private String sexo;
+    private int idade;
+    
+    //método
+    
+    public void fazerNiver()
+    {
+        this.idade = this.idade + 1;
+    }
+    
+    //getters and setter
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getIdade() 
+    {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    
+    //printa tudo
+
+    @Override
+    public String toString()
+    {
+        return "Pessoa{" + "nome=" + nome + ", sexo=" + sexo + ", idade=" + idade + '}';
+    }
+}
